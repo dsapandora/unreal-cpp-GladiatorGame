@@ -1,0 +1,13 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "{C9F2D448-4189-15EA-142C-12A067469B92}",
+	"Category": "",
+	"Description": "",
+	"Modules": [
+		{
+			"Name": "GladiatorGame",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}
