@@ -14,6 +14,9 @@ class GLADIATORGAME_API AIADirector : public AActor
 	GENERATED_UCLASS_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Target)
-	TArray<AActor*>	targetPointList;
+	TArray<ATargetPoint*>	SpawnPointList;
+	UPROPERTY(EditAnywhere, noclear, BlueprintReadWrite, Category = Target)
+	TSubclassOf<class AActor>  SpawnClass;
 	
+	virtual void	BeginPlay() override;
 };

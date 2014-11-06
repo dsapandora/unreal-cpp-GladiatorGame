@@ -15,6 +15,4 @@ class GLADIATORGAME_API AAGladiatorCode : public ACharacter
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Power)
 	int32	life;
-
-	virtual void	BeginPlay() override;
 };
