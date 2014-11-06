@@ -10,4 +10,13 @@ AAGladiatorCode::AAGladiatorCode(const class FPostConstructInitializeProperties&
 
 }
 
+void	AAGladiatorCode::BeginPlay()
+{
+	Super::BeginPlay();
+	if (GEngine)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, TEXT("Hello World!"));
+		GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Yellow, FString::FromInt(life));
+	}
+}
 
