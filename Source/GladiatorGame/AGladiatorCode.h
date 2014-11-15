@@ -15,4 +15,10 @@ class GLADIATORGAME_API AAGladiatorCode : public ACharacter
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Power)
 	int32	life;
+	UPROPERTY(VisibleAnywhere, Category = Attack)
+	bool	canAttack;
+	UPROPERTY(EditAnywhere, Category = Attack)
+	float	timeToAttack;
+
+	virtual void	Tick(float) OVERRIDE;
 };
