@@ -187,3 +187,6 @@ Binaries/
 Intermediate/
 Saved/
 GladiatorGame.sdf
+
+# VS
+*.sln
