@@ -10,11 +10,17 @@ AAGladiatorCode::AAGladiatorCode(const class FPostConstructInitializeProperties&
 	PrimaryActorTick.bCanEverTick = true;
 	SetActorTickEnabled(true);
 	canAttack = true;
-	timeToAttack = 1.0f;
+	timeToAttack = 2.0f;
 }
 
 void
 AAGladiatorCode::Tick(float deltaseconds)
 {
 	Super::Tick(deltaseconds);
+}
+
+void
+AAGladiatorCode::setID(int32 pID)
+{
+	pId = pID;
 }

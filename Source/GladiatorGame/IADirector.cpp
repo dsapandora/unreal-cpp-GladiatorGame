@@ -11,6 +11,11 @@ AIADirector::AIADirector(const class FPostConstructInitializeProperties& PCIP)
 	SetActorTickEnabled(true);
 	vm_secondsLeft = 0.0f;
 	vm_playerCanAttack = 0;
+	vm_defaultDir.push_back(FVector(0.0f, 1.0f, 0.0f));
+	vm_defaultDir.push_back(FVector(-0.5f, -1.0f, 0.0f));
+	vm_defaultDir.push_back(FVector(1.0f, 0.5f, 0.0f));
+	vm_defaultDir.push_back(FVector(-1.0f, 0.5f, 0.0f));
+	vm_defaultDir.push_back(FVector(1.0f, -1.0f, 0.0f));
 }
 
 void	AIADirector::BeginPlay()
@@ -23,6 +28,8 @@ void	AIADirector::BeginPlay()
 		AActor*	lEnemy = GetWorld()->SpawnActor(SpawnClass, &lVector, &lRotator);
 		((AAGladiatorCode*)lEnemy)->life = 3;
 		((AAGladiatorCode*)lEnemy)->canAttack = false;
+		((AAGladiatorCode*)lEnemy)->setID(index);
+		((AAGladiatorCode*)lEnemy)->moveDir = vm_defaultDir[index];
 		vm_enemyList.push_back(lEnemy);
 	}
 }

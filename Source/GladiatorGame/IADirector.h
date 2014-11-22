@@ -26,6 +26,7 @@ class GLADIATORGAME_API AIADirector : public AActor
 	
 private:
 	std::vector<AActor*>	vm_enemyList;
+	std::vector<FVector>	vm_defaultDir;
 	float					vm_secondsLeft;
 	int						vm_playerCanAttack;
 };
